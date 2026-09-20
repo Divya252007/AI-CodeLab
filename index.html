@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI CodeLab - AI-powered code review and learning assistant by Divya Dharshini V.">
+  <title>AI CodeLab | AI-Powered Code Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand"><span class="brand-dot"></span> AI CodeLab</div>
+    <div class="nav-links">
+      <a href="#demo">Live Demo</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a class="nav-btn" href="#demo">Try It →</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">GENERATIVE AI × SOFTWARE DEVELOPMENT</div>
+        <h1>Build smarter.<br><span>Code better.</span></h1>
+        <p class="hero-text">
+          AI CodeLab is an AI-powered code review and learning assistant that explains code,
+          finds potential issues, suggests improvements and generates test cases.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#demo">Explore the Demo →</a>
+          <a class="secondary-btn" href="#about">View Project</a>
+        </div>
+        <div class="mini-stats">
+          <div><strong>5+</strong><span>AI tasks</span></div>
+          <div><strong>1</strong><span>interactive workspace</span></div>
+          <div><strong>∞</strong><span>learning possibilities</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="window-bar">
+          <span></span><span></span><span></span>
+          <label>ai_codelab.py</label>
+        </div>
+        <div class="code-preview">
+          <div><span class="num">01</span><span class="kw">def</span> <span class="fn">calculate_average</span>(numbers):</div>
+          <div><span class="num">02</span>    total = <span class="val">0</span></div>
+          <div><span class="num">03</span>    <span class="kw">for</span> n <span class="kw">in</span> numbers:</div>
+          <div><span class="num">04</span>        total += n</div>
+          <div><span class="num">05</span>    <span class="kw">return</span> total / <span class="fn">len</span>(numbers)</div>
+          <div class="ai-line">✦ AI Analysis ready</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">INTERACTIVE DEMO</div>
+          <h2>Ask AI about your code.</h2>
+        </div>
+        <span class="demo-badge">● Demo Mode</span>
+      </div>
+
+      <div class="workspace">
+        <div class="editor-panel">
+          <div class="panel-head">
+            <div>
+              <strong>Code Input</strong>
+              <span>Python</span>
+            </div>
+            <button id="loadSample">Load sample</button>
+          </div>
+          <textarea id="codeInput" spellcheck="false">def calculate_average(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total / len(numbers)
+
+values = [10, 20, 30, 40]
+print(calculate_average(values))</textarea>
+          <div class="editor-footer">
+            <span id="lineCount">8 lines</span>
+            <button class="analyze-btn" id="analyzeBtn">✦ Analyze with AI</button>
+          </div>
+        </div>
+
+        <div class="result-panel">
+          <div class="panel-head">
+            <div>
+              <strong>AI Analysis</strong>
+              <span id="status">Ready</span>
+            </div>
+            <span class="spark">✦</span>
+          </div>
+          <div id="result" class="result">
+            <div class="empty-state">
+              <div class="empty-icon">✦</div>
+              <h3>Your AI review appears here</h3>
+              <p>Enter code and click <b>Analyze with AI</b> to see an interactive demo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="demo-note">This public portfolio demo uses a simulated response so visitors can explore the interface without an API key. The full project can be connected to a GenAI API.</p>
+    </section>
+
+    <section class="section" id="features">
+      <div class="eyebrow">WHAT IT CAN DO</div>
+      <h2>One workspace. Multiple AI capabilities.</h2>
+      <div class="feature-grid">
+        <article><div class="feature-icon">⌁</div><h3>Code Review</h3><p>Get structured feedback on readability, maintainability and common coding risks.</p></article>
+        <article><div class="feature-icon">⌘</div><h3>Explain Code</h3><p>Turn unfamiliar code into a simple, student-friendly explanation.</p></article>
+        <article><div class="feature-icon">⚡</div><h3>Find Bugs</h3><p>Spot potential issues and understand why they matter before fixing them.</p></article>
+        <article><div class="feature-icon">↗</div><h3>Improve Code</h3><p>Explore cleaner approaches while keeping the original logic in focus.</p></article>
+        <article><div class="feature-icon">✓</div><h3>Generate Tests</h3><p>Create useful test scenarios to validate expected and edge-case behavior.</p></article>
+        <article><div class="feature-icon">◈</div><h3>Learn by Building</h3><p>Use AI as a practical learning partner while developing real software skills.</p></article>
+      </div>
+    </section>
+
+    <section class="section project-section" id="about">
+      <div class="about-card">
+        <div>
+          <div class="eyebrow">PROJECT STORY</div>
+          <h2>From an AI workshop to a working idea.</h2>
+          <p>
+            AI CodeLab was created as a practical application of concepts explored during
+            the <strong>NxtWave Intensive AI Bootcamp</strong>. The goal is simple:
+            turn Generative AI concepts into something people can actually interact with.
+          </p>
+          <div class="tech-tags">
+            <span>Python</span><span>Streamlit</span><span>Generative AI</span><span>Prompt Engineering</span><span>Google GenAI</span>
+          </div>
+        </div>
+        <div class="creator">
+          <div class="avatar">DD</div>
+          <strong>Divya Dharshini V</strong>
+          <span>CSE & AIML • 2nd Year</span>
+          <small>AI / ML • Software Development</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <div class="eyebrow">KEEP BUILDING</div>
+        <h2>AI is more powerful when you build with it.</h2>
+        <p>This project is a starting point for smarter developer tools.</p>
+      </div>
+      <a class="primary-btn" href="#demo">Try the Demo →</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 AI CodeLab</span>
+    <span>Built as a Generative AI learning project • Divya Dharshini V</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
